@@ -9,20 +9,21 @@ Bienvenue dans la communauté 3D Slicer. Cette page contient les informations do
 
 Slicer peut également fonctionner sur des machines virtuelles et des conteneurs docker. Par exemple, [*3D Slicer + Jupyter Notebook* dans un navigateur web](https://mybinder.org/v2/gh/Slicer/SlicerNotebooks/master?filepath=SlicerWeb.ipynb) est disponible gratuitement via le service Binder (aucune installation nécessaire, l'application peut fonctionner dans n'importe quel navigateur web).
 
-### Operating system versions
+### Versions des systèmes d'exploitation
 
-- Windows : Windows 10 ou 11, avec toutes les mises à jour recommandées installées. La version 1903 de Windows 10 (mise à jour de mai 2019) ou une version ultérieure est requise pour la prise en charge des caractères internationaux (UTF-8) dans les noms de fichiers et le texte. Microsoft ne prend plus en charge Windows 8.1 et Windows 7 et Slicer n'est pas testé sur ces anciennes versions du système d'exploitation, mais peut encore fonctionner.
-- macOS : macOS High Sierra (10.13) ou version ultérieure (systèmes basés sur Intel et ARM). La dernière version publique est recommandée.
-- Linux: Ubuntu 18.04 or later<br>CentOS 7 or later. Latest LTS (Long-term-support) version is recommended.
+- Windows : Windows 10 ou 11, avec toutes les mises à jour recommandées installées. La version 1903 de Windows 10 (mise à jour de mai 2019) ou une version ultérieure est requise pour la prise en charge des caractères internationaux (UTF-8) dans les noms de fichiers et le texte. Microsoft ne prend plus en charge Windows 8.1 et Windows 7. Slicer n'est donc pas testé sur ces anciennes versions du système d'exploitation, mais pourrait malgré tout y fonctionner.
+- MacOS : MacOS High Sierra (10.13) ou version ultérieure (systèmes basés sur Intel et ARM). La dernière version publique est recommandée.
+- Linux : Ubuntu 18.04 ou version ultérieure<br>CentOS 7 ou version ultérieure. La dernière version LTS (Long-term-support) est recommandée.
 
-### Recommended hardware configuration
-- Memory: more than 4GB (8 or more is recommended). As a general rule, have 10x more memory than the amount of data that you load.
-- Display: a minimum resolution of 1024 by 768 (1280 by 1024 or better is recommended).
-- Graphics: Dedicated graphics hardware (discrete GPU) memory is recommended for fast volume rendering.
-GPU: Graphics must support minimum OpenGL 3.2. Integrated graphics card is sufficient for basic visualization. Discrete graphics card (such as NVidia GPU) is recommended for interactive 3D volume rendering and fast rendering of complex scenes. GPU texture memory (VRAM) should be larger than your largest dataset (e.g., working with 2GB data, get VRAM > 4GB) and check that your images fit in maximum texture dimensions of your GPU hardware. Except rendering, most calculations are performed on CPU, therefore having a faster GPU will generally not impact the overall speed of the application.
-- Some computations in 3D Slicer are multi-threaded and will benefit from multi core, multi CPU configurations.
-- Interface device: a three button mouse with scroll wheel is recommended. Pen, multi-touchscreen, touchpad, and graphic tablet are supported. All OpenVR-compatible virtual reality headsets are supported for virtual reality display.
-- Internet connection to access extensions, Python packages, online documentation, sample data sets, and tutorials.
+### Configuration matérielle recommandée
+
+- Mémoire : plus de 4 Go (8 ou plus sont recommandés). En règle générale, ayez 10 fois plus de mémoire que la quantité de données que vous chargez.
+- Affichage : une résolution minimale de 1024 par 768 (1280 par 1024 ou plus est recommandé).
+- Graphique : Une mémoire dédiée au matériel graphique (GPU discret) est recommandée pour un rendu rapide des volumes.
+GPU : Le matériel graphique doit supporter au minimum OpenGL 3.2. Une carte graphique intégrée est suffisante pour une visualisation de base. Une carte graphique discrète (telle qu'un GPU NVidia) est recommandée pour le rendu interactif de volumes 3D et le rendu rapide de scènes complexes. La mémoire de texture du GPU (VRAM) doit être supérieure à votre plus grand jeu de données (par exemple, si vous travaillez avec des données de 2 Go, utilisez une VRAM > 4 Go) et vérifiez que vos images tiennent dans les dimensions maximales de texture de votre matériel GPU. À l'exception du rendu, la plupart des calculs sont effectués par le CPU. Par conséquent, un GPU plus rapide n'aura généralement pas d'impact sur la vitesse globale de l'application.
+- Certains calculs de 3D Slicer sont multithreadés et bénéficieront de configurations multi-cœurs et multi-processeurs.
+- Dispositif d'interface : une souris à trois boutons avec molette de défilement est recommandée. Le stylet, l'écran tactile multipoint, le pavé tactile et la tablette graphique sont pris en charge. Tous les casques de réalité virtuelle compatibles avec OpenVR sont pris en charge pour l'affichage de la réalité virtuelle.
+- Connexion Internet pour accéder aux extensions, aux paquets Python, à la documentation en ligne, aux jeux de données d'exemple et aux tutoriels.
 
 ## Installing 3D Slicer
 
