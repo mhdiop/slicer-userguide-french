@@ -27,125 +27,125 @@ GPU : Le matériel graphique doit supporter au minimum OpenGL 3.2. Une carte gra
 
 ## Installing 3D Slicer
 
-To download Slicer, click [here](https://download.slicer.org/).
+Pour télécharger Slicer, cliquez [ici](https://download.slicer.org/).
 
 ![](https://github.com/Slicer/Slicer/releases/download/docs-resources/getting_started_download.png)
 
 **Notes:**
-- The "Preview Release" of 3D Slicer is updated daily (process starts at 11pm ET and takes few hours to complete) and represents the latest development including new features and fixes.
-- The "Stable Release" is usually updated a few times a year and is more rigorously tested.
-- Slicer is generally simple to install on all platforms. It is possible to install multiple versions of the application on the same user account and they will not interfere with each other. If you run into mysterious problems with your installation you can try deleting the [application settings files](settings.md#settings-file-location).
-- Only 64-bit Slicer installers are available to download. Developers can attempt to build 32-bit versions on their own if they need to run Slicer on a 32-bit operating system. That said, this should be carefully considered as many clinical research tasks, such as processing of large CT or MR volumetric datasets, require more memory than can be accommodated with a 32-bit program.
+- La "Preview Release" de 3D Slicer est mise à jour quotidiennement (le processus commence à 23 heures heure de l'Est et prend quelques heures) et représente le dernier développement incluant les nouvelles fonctionnalités et les corrections.
+- La "Stable Release" est habituellement mise à jour plusieurs fois par an et fait l'objet de tests plus rigoureux.
+- Slicer est généralement simple à installer sur toutes les plateformes. Il est possible d'installer plusieurs versions de l'application sur le même compte utilisateur et elles n'interféreront pas entre elles. Si vous rencontrez des problèmes mystérieux lors de votre installation, vous pouvez essayer de supprimer les [fichiers de paramètres de l'application] (settings.md#settings-file-location).
+- Seuls les installateurs 64 bits de Slicer sont disponibles au téléchargement. Les développeurs peuvent essayer de construire eux-mêmes des versions 32 bits s'ils ont besoin d'exécuter Slicer sur un système d'exploitation 32 bits. Cela dit, il convient d'y réfléchir attentivement, car de nombreuses tâches de recherche clinique, telles que le traitement de grands ensembles de données volumétriques de tomodensitométrie ou d'IRM, nécessitent plus de mémoire qu'un programme 32 bits.
 
-Once downloaded, follow the instructions below to complete installation:
+Une fois téléchargé, suivez les instructions ci-dessous pour terminer l'installation :
 
 ### Windows
 
-- Run the installer.
-  - Current limitation: Installation path must only contain English ([ASCII printable](https://en.wikipedia.org/wiki/ASCII#Printable_characters)) characters because otherwise some Python packages may not load correctly (see this [issue](https://github.com/Slicer/Slicer/issues/5383) for more details).
-- Run Slicer from the Windows start menu.
-- Use "Apps & features" in Windows settings to remove the application.
+- Exécutez le programme d'installation.
+  - Limitation actuelle : Le chemin d'installation ne doit contenir que des caractères anglais ([ASCII imprimable](https://en.wikipedia.org/wiki/ASCII#Printable_characters)), sinon certains paquets Python risquent de ne pas se charger correctement (voir cette [question](https://github.com/Slicer/Slicer/issues/5383) pour plus de détails).
+- Lancez Slicer à partir du menu de démarrage de Windows.
+- Utilisez "Programmes et fonctionnalités" dans les paramètres de Windows pour supprimer l'application.
 
 ### Mac
 
-- Open the install package (.dmg file).
-- Drag the Slicer application (Slicer.app) to your Applications folder (or other location of your choice).
-  - This step is necessary because content of a .dmg file is opened as a read-only volume, and you cannot install extensions or Python packages into a read-only volume.
-- Delete the Slicer.app folder to uninstall.
+- Ouvrez le paquet d'installation (fichier .dmg).
+- Faites glisser l'application Slicer (Slicer.app) vers votre dossier Applications (ou tout autre emplacement de votre choix).
+  - Cette étape est nécessaire car le contenu d'un fichier .dmg est ouvert en tant que volume en lecture seule, et vous ne pouvez pas installer d'extensions ou de paquets Python dans un volume en lecture seule.
+- Supprimez le dossier Slicer.app pour le désinstaller.
 
-Note for installing a Preview Release: Currently, preview release packages are not signed. Therefore, when the application is started the first time the following message is displayed: "Slicer... can't be opened because it is from an unidentified developer". To resolve this error, locate the application in Finder and right-click (two-finger click) and click `Open`. When it says `This app can’t be opened` go ahead and hit cancel. Right click again and say `Open` (yes, you need to repeat the same as you did before - the outcome will be different than the first time). Click the `Open` (or `Open anyway`) button to start the application. See more explanation and alternative techniques [here](https://support.apple.com/en-my/guide/mac-help/mh40616/mac).
+Remarque concernant l'installation d'une Preview Release : Actuellement, les paquets de la Preview Release ne sont pas signés. Par conséquent, lorsque l'application est lancée la première fois, le message suivant s'affiche : "Slicer... ne peut pas être ouvert car il provient d'un développeur non identifié". Pour résoudre cette erreur, localisez l'application dans le Finder, faites un clic droit (deux doigts) et cliquez sur "Ouvrir". Lorsque le message "Cette application ne peut pas être ouverte" apparaît, cliquez sur "Annuler". Faites à nouveau un clic droit et dites "Ouvrir" (oui, vous devez répéter la même chose que la fois précédente - le résultat sera différent de celui de la première fois). Cliquez sur le bouton "Ouvrir" (ou "Ouvrir quand même") pour lancer l'application. Vous trouverez plus d'explications et des techniques alternatives [ici] (https://support.apple.com/en-my/guide/mac-help/mh40616/mac).
 
-#### Installing using Homebrew
+#### Installer avec Homebrew
 
-Slicer can be installed with a single terminal command using the [Homebrew](https://brew.sh/) package manager:
+Slicer peut être installé à l'aide d'une seule commande dans un terminal en utilisant le gestionnaire de paquets [Homebrew](https://brew.sh/) :
 
 ```shell
-brew install --cask slicer  # to install
-brew upgrade slicer         # to upgrade
-brew uninstall slicer       # to uninstall
+brew install --cask slicer  # pour installer
+brew upgrade slicer         # pour mettre à jour
+brew uninstall slicer       # pour désinstaller
 ```
 
 This procedure avoids the typical google-download-mount-drag process to install macOS applications.
 
-Preview releases can be installed using [`homebrew-cask-versions`](https://github.com/Homebrew/homebrew-cask-versions):
+Les Preview releases peuvent être installées en utilisant [`homebrew-cask-versions`](https://github.com/Homebrew/homebrew-cask-versions) :
 
 ```shell
-brew tap homebrew/cask-versions     # needs to be run once
-brew install --cask slicer-preview  # to install
-brew upgrade slicer-preview         # to upgrade
-brew uninstall slicer-preview       # to uninstall
+brew tap homebrew/cask-versions     # doit être exécuté une fois
+brew install --cask slicer-preview  # pour installer
+brew upgrade slicer-preview         # pour mettre à jour
+brew uninstall slicer-preview       # pour désinstaller
 ```
 
 ### Linux
 
-- Open the tar.gz archive and copy directory to the location of your choice.
-- Installation of additional packages may be necessary depending on the Linux distribution and version, as described in subsections below.
-- Run the `Slicer` executable.
-- Remove the directory to uninstall.
+- Ouvrez l'archive tar.gz et copiez le répertoire à l'emplacement de votre choix.
+- L'installation de paquets supplémentaires peut être nécessaire selon la distribution et la version de Linux, comme décrit dans les sous-sections ci-dessous.
+- Lancez l'exécutable `Slicer`.
+- Supprimez le répertoire pour désinstaller.
 
 **Notes:**
-- Slicer is expected to work on the vast majority of desktop and server Linux distributions. The system is required to provide at least GLIBC 2.17 and GLIBCCC 3.4.19. For more details, read [here](https://www.python.org/dev/peps/pep-0599/#the-manylinux2014-policy).
-- The Extension Manager uses QtWebengine to display the list of extensions. If your linux kernel does not fulfill [sandboxing requirements](https://doc.qt.io/Qt-5/qtwebengine-platform-notes.html#sandboxing-support) then you can turn off sandboxing by this command: `export QTWEBENGINE_DISABLE_SANDBOX=1`
-- Getting command-line arguments and process output containing non-ASCII characters requires the system to use a UTF-8 locale. If the system uses a different locale then the `export LANG="C.UTF-8"` command may be used before launching the application to switch to an acceptable locale.
+- Slicer est censé fonctionner sur la grande majorité des distributions Linux de bureau et de serveur. Le système doit fournir au moins GLIBC 2.17 et GLIBCCC 3.4.19. Pour plus de détails, lisez [ici] (https://www.python.org/dev/peps/pep-0599/#the-manylinux2014-policy).
+- Le gestionnaire d'extensions utilise QtWebengine pour afficher la liste des extensions. Si votre noyau linux ne répond pas aux [exigences de sandboxing](https://doc.qt.io/Qt-5/qtwebengine-platform-notes.html#sandboxing-support) alors vous pouvez désactiver le sandboxing par cette commande : `export QTWEBENGINE_DISABLE_SANDBOX=1`
+- Pour obtenir des arguments de ligne de commande et des résultats de processus contenant des caractères non ASCII, le système doit utiliser une variable locale UTF-8. Si le système utilise une autre  variable locale, la commande `export LANG="C.UTF-8"` peut être utilisée avant de lancer l'application pour passer à une variable locale acceptable.
 
 #### Debian / Ubuntu
-The following may be needed on fresh debian or ubuntu:
+Les éléments suivants peuvent être nécessaires sur un debian ou un ubuntu récent :
 
     sudo apt-get install libpulse-dev libnss3 libglu1-mesa
     sudo apt-get install --reinstall libxcb-xinerama0
 
-:::{note} Warning
-:class: warning
+:::{note} Avertissement
+:class : warning
 
-Debian 10.12 users may encounter an error when launching Slicer:
+Les utilisateurs de Debian 10.12 peuvent rencontrer une erreur lors du lancement de Slicer :
 
-    Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway.
+   Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway.
     qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
     This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
 
-    Available platform plugins are: xcb.
+   Available platform plugins are: xcb.
 
-[The solution](https://forum.qt.io/topic/93247/qt-qpa-plugin-could-not-load-the-qt-platform-plugin-xcb-in-even-though-it-was-found/81) is to create symlink:
+[La solution](https://forum.qt.io/topic/93247/qt-qpa-plugin-could-not-load-the-qt-platform-plugin-xcb-in-even-though-it-was-found/81) consiste à créer un lien symbolique :
 
     sudo ln -s /usr/lib/x86_64-linux-gnu/libxcb-util.so /usr/lib/x86_64-linux-gnu/libxcb-util.so.1
 
 :::
 
 #### ArchLinux
-ArchLinux runs the `strip` utility by default; this needs to be disabled in order to run Slicer binaries.  For more information see [this thread on the Slicer Forum](https://discourse.slicer.org/t/could-not-load-dicom-data/14211/5).
+ArchLinux exécute l'utilitaire `strip` par défaut ; il doit être désactivé afin d'exécuter les binaires Slicer.  Pour plus d'informations, voir [cette discussion sur le forum Slicer] (https://discourse.slicer.org/t/could-not-load-dicom-data/14211/5).
 
 #### Fedora
-Install the dependencies:
+Installez les dépendances :
 
     sudo dnf install mesa-libGLU libnsl
 
-The included libcrypto.so.1.1 in the Slicer installation is incompatible with the system libraries used by Fedora 35. The fix, until it is updated, is to move/remove the included libcrypto files:
+La libcrypto.so.1.1 incluse dans l'installation de Slicer est incompatible avec les bibliothèques système utilisées par Fedora 35. La solution, jusqu'à ce qu'elle soit mise à jour, est de déplacer/supprimer les fichiers libcrypto inclus :
 
     $SLICER_ROOT/lib/Slicer-4.xx/libcrypto.*
 
-## Using Slicer
+## Utiliser Slicer
 
-3D Slicer offers lots of features and gives users great flexibility in how to use them. As a result, new users may be overwhelmed with the number of options and have difficulty figuring out how to perform even simple operations. This is normal and many users successfully crossed this difficult stage by investing some time into learning how to use this software.
+3D Slicer propose de nombreuses fonctionnalités et offre aux utilisateurs une grande flexibilité dans la manière de les utiliser. Par conséquent, les nouveaux utilisateurs peuvent être submergés par le nombre d'options et avoir des difficultés à comprendre comment effectuer même des opérations simples. C'est normal et de nombreux utilisateurs ont réussi à franchir cette étape difficile en investissant un peu de temps pour apprendre à utiliser ce logiciel.
 
-How to learn Slicer?
+Comment apprendre Slicer ?
 
-### Quick start
+### Démarrage rapide
 
-You may try to figure out how the application works by loading data sets and explore what you can do.
+Vous pouvez essayer de comprendre le fonctionnement de l'application en chargeant des jeux de données et explorer ce que vous pouvez faire.
 
-#### Load data
+#### Charger des données
 
-Open 3D Slicer and using the Welcome panel either load your own data or download sample data to explore. Sample data is often useful for trying the features of 3D Slicer if you don't have data of your own.
+Ouvrez 3D Slicer et, à l'aide du panneau de bienvenue, chargez vos propres données ou téléchargez des échantillons de données à explorer. Les échantillons de données sont souvent utiles pour essayer les fonctionnalités de 3D Slicer si vous ne disposez pas de vos propres données.
 
 ![](https://github.com/Slicer/Slicer/releases/download/docs-resources/getting_started_load_data.png)
 
 ![](https://github.com/Slicer/Slicer/releases/download/docs-resources/getting_started_sample_data.png)
 
-#### View data
+#### Visualiser des données
 
-Data module's Subject hierarchy tab shows all data sets in the scene. Click the "eye" icon to show/hide an item in all views.
+L'onglet "Hiérarchie des sujets" du module "Data" affiche tous les jeux de données de la scène. Cliquez sur l'icône "œil" pour afficher/masquer un élément dans toutes les vues.
 
-You can customize views (show orientation marker, ruler, change orientation, transparency) by clicking on the push pin in the top left corner of viewer. In the slice viewers, the horizontal bar can be used to scroll through slices or select a slice.
+Vous pouvez personnaliser les vues (afficher le marqueur d'orientation, la règle, changer l'orientation, la transparence) en cliquant sur la punaise dans le coin supérieur gauche du visualiseur. Dans les visionneuses de coupes, la barre horizontale peut être utilisée pour faire défiler les coupes ou sélectionner une coupe.
 
 ![](https://github.com/Slicer/Slicer/releases/download/docs-resources/getting_started_view_controllers.png)
 
