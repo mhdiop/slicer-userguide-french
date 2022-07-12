@@ -149,57 +149,57 @@ Vous pouvez personnaliser les vues (afficher le marqueur d'orientation, la règl
 
 ![](https://github.com/Slicer/Slicer/releases/download/docs-resources/getting_started_view_controllers.png)
 
-#### Process data
+#### Traiter des données
 
-3D Slicer is built on a modular architecture. Choose a module to process or analyze your data. Most important modules are the following (complete list is available in [Modules](modules/index.md) section):
+3D Slicer est construit sur une architecture modulaire. Choisissez un module pour traiter ou analyser vos données. Les modules les plus importants sont les suivants (la liste complète est disponible dans la section [Modules](modules/index.md)) :
 
-- *Welcome*: The default module when 3D Slicer is started. The panel features options for loading data and customizing 3D Slicer. Below those options are drop-down boxes that contain essential information for using 3D Slicer.
-- [Data](modules/data.md): acts as a central data-organizing hub. Lists all data currently in the scene and allows basic operations such as search, rename, delete and move.
-- [DICOM](modules/dicom.md): Import and export DICOM objects, such as images, segmentations, structure sets, radiation therapy objects, etc.
-- [Volumes](modules/volumes.md): Used for changing the appearance of various volume types.
-- [Volume Rendering](modules/volumerendering.md): Provides interactive visualization of 3D image data.
-- [Segmentations](modules/segmentations.md): Edit display properties and import/export segmentations.
-- [Segment Editor](modules/segmenteditor.md): Segment 3D volumes using various manual, semi-automatic, and automatic tools.
-- [Markups](modules/markups.md): Allows the creation and editing of markups associated with a scene.
-- [Models](modules/models.md): Loads and adjusts display parameters of models. Allows the user to change the appearance of and organize 3D surface models.
-- [Transforms](modules/transforms.md): This module is used for creating and editing transformation matrices. You can establish these relations by moving nodes from the Transformable list to the Transformed list or by dragging the nodes under the Transformation nodes in the Data module.
+- *Bienvenue* : Le module par défaut lorsque 3D Slicer est lancé. Il présente des options pour le chargement des données et la personnalisation de 3D Slicer. Sous ces options, des boîtes déroulantes contiennent des informations essentielles à l'utilisation de 3D Slicer.
+- [Data] (modules/data.md) : agit comme un centre d'organisation des données. Il répertorie toutes les données actuellement présentes dans la scène et permet des opérations de base telles que rechercher, renommer, supprimer et déplacer.
+- DICOM](modules/dicom.md) : Importez et exportez des objets DICOM, tels que des images, des segmentations, des ensembles de structures, des objets de radiothérapie, etc.
+- [Volumes](modules/volumes.md) : Utilisé pour changer l'apparence de divers types de volumes.
+- [Volume Rendering](modules/volumerendering.md) : Fournit une visualisation interactive des données d'imagerie 3D.
+- [Segmentations](modules/segmentations.md) : Modifier les propriétés d'affichage et importer/exporter des segmentations.
+- [Segment Editor](modules/segmenteditor.md) : Segmentez des volumes 3D en utilisant divers outils manuels, semi-automatiques et automatiques.
+- [Markups](modules/markups.md) : Permet la création et l'édition des markups (annotations) associés à une scène.
+- [ Models ](modules/models.md) : Charge et ajuste les paramètres d'affichage des modèles. Permet à l'utilisateur de modifier l'apparence des modèles de surface 3D et de les organiser.
+- [Transforms](modules/transforms.md) : Ce module est utilisé pour créer et éditer des matrices de transformation. Vous pouvez établir ces relations en déplaçant les nœuds de la liste Transformable vers la liste Transformé ou en faisant glisser les nœuds sous les nœuds Transformation du module Data.
 
-#### Save data
+#### Sauvegarder des données
 
-Data sets loaded into the application can be saved using Save data dialog or exported to DICOM format using DICOM module. Detailes are described in [Data loading and saving section](data_loading_and_saving.md).
+Les jeux de données chargés dans l'application peuvent être enregistrés à l'aide de la boîte de dialogue Enregistrer les données, ou exportés au format DICOM à l'aide du module DICOM. Les détails sont décrits dans la section [Chargement et sauvegarde des données] (data_loading_and_saving.md).
 
-#### Extensions
+#### Les extensions
 
-3D Slicer supports plug-ins that are called extensions. An extension could be seen as a delivery package bundling together one or more Slicer modules. After installing an extension, the associated modules will be presented to the user as built-in ones. Extensions can be downloaded from the extensions manager to selectively install features that are useful for the end-user.
+3D Slicer prend en charge des plug-ins appelés extensions. Une extension peut être considérée comme un paquet de distribution regroupant un ou plusieurs modules Slicer. Après avoir installé une extension, les modules associés seront présentés à l'utilisateur comme des modules intégrés. Les extensions peuvent être téléchargées à partir du gestionnaire d'extensions pour installer de manière sélective les fonctionnalités utiles à l'utilisateur final.
 
 ![](https://github.com/Slicer/Slicer/releases/download/docs-resources/getting_started_module_list.png)
 
 ![](https://github.com/Slicer/Slicer/releases/download/docs-resources/getting_started_extensions_manager.png)
 
-For details about downloading extensions, see [Extensions Manager documentation](extensions_manager.md).
-Click [here](https://www.slicer.org/wiki/Documentation/Nightly/ModuleExtensionListing/Extensions_by_category) for a full list of extensions. The links on the page will provide documentation for each extension.
+Pour plus de détails sur le téléchargement des extensions, voir la [documentation du gestionnaire d'extensions](extensions_manager.md).
+Cliquez [ici](https://www.slicer.org/wiki/Documentation/Nightly/ModuleExtensionListing/Extensions_by_category) pour obtenir une liste complète des extensions. Les liens sur la page fourniront la documentation pour chaque extension.
 
-Slicer is extensible. If you are interested in customizing or adding functionality to Slicer, click [here](https://www.slicer.org/wiki/Documentation/Nightly/Training#Tutorials_for_software_developers).
+Slicer est extensible. Si vous souhaitez personnaliser ou ajouter des fonctionnalités à Slicer, cliquez [ici] (https://www.slicer.org/wiki/Documentation/Nightly/Training#Tutorials_for_software_developers).
 
-### Tutorials
+### Tutoriels
 
-You learn both basic concepts and highly specialized workflows from the numerous available step-by-step and video tutorials.
+Vous apprenez aussi bien les concepts de base que les flux de travail hautement spécialisés grâce aux nombreux tutoriels vidéo et étape par étape disponibles.
 
-Try the [Welcome Tutorial](https://www.slicer.org/wiki/Documentation/Nightly/Training#Slicer_Welcome_Tutorial) and the [Data Loading and 3D Visualization Tutorial](https://www.slicer.org/wiki/Documentation/Nightly/Training#Slicer4_Data_Loading_and_3D_Visualization) to learn the basics.
+Essayez le [Tutoriel de bienvenue] (https://www.slicer.org/wiki/Documentation/Nightly/Training#Slicer_Welcome_Tutorial) et le [Tutoriel sur le chargement des données et la visualisation 3D] (https://www.slicer.org/wiki/Documentation/Nightly/Training#Slicer4_Data_Loading_and_3D_Visualization) pour apprendre les bases.
 
-For more tutorials, visit the [Tutorial page](https://www.slicer.org/wiki/Documentation/Nightly/Training).
+Pour plus de tutoriels, visitez la [page des tutoriels] (https://www.slicer.org/wiki/Documentation/Nightly/Training).
 
-### User manual
+### Manuel utilisateur
 
-Browse the [User Interface](user_interface.md) section to find quick overview of the application user interface or [Modules](modules/index.md) section for detailed description of each module.
+Parcourez la section [Interface utilisateur](user_interface.md) pour obtenir un aperçu rapide de l'interface utilisateur de l'application ou la section [Modules](modules/index.md) pour obtenir une description détaillée de chaque module.
 
-### Ask for help
+### Obtenir de l'aide
 
-3D Slicer has been around for many years and many questions have been asked and answered about it already. If you have any questions, then you may start with a web search, for example Google `slicer load jpg` to find out how you can import a stack of jpg images.
+3D Slicer existe depuis de nombreuses années et de nombreuses questions ont déjà été posées et répondues à son sujet. Si vous avez des questions, vous pouvez commencer par une recherche sur le web, par exemple en tapant sur Google `slicer charger jpg` pour savoir comment importer une pile d'images jpg.
 
-The application has a large and very friendly and helpful user community. We have people who will happy to help with simple questions, such as how to do a specific task in Slicer, and we have a large number of engineering and medical experts who can give you advice with how to solve complex problems.
+L'application dispose d'une grande communauté d'utilisateurs très sympathiques et serviables. Nous avons des personnes qui seront heureuses de vous aider pour des questions simples, comme la façon d'effectuer une tâche spécifique dans Slicer, et nous avons un grand nombre d'experts en ingénierie et en médecine qui peuvent vous donner des conseils pour résoudre des problèmes complexes.
 
-**If you have any questions, go to the [Slicer forum](https://discourse.slicer.org) and ask us!**
+**Si vous avez des questions, rendez-vous sur le [forum Slicer] (https://discourse.slicer.org) et posez-les nous!**
 
 ## Glossary
 
