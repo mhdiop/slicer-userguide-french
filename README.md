@@ -34,7 +34,7 @@ Pour télécharger Slicer, cliquez [ici](https://download.slicer.org/).
 **Notes:**
 - La "Preview Release" de 3D Slicer est mise à jour quotidiennement (le processus commence à 23 heures heure de l'Est et prend quelques heures) et représente le dernier développement incluant les nouvelles fonctionnalités et les corrections.
 - La "Stable Release" est habituellement mise à jour plusieurs fois par an et fait l'objet de tests plus rigoureux.
-- Slicer est généralement simple à installer sur toutes les plateformes. Il est possible d'installer plusieurs versions de l'application sur le même compte utilisateur et elles n'interféreront pas entre elles. Si vous rencontrez des problèmes mystérieux lors de votre installation, vous pouvez essayer de supprimer les [fichiers de paramètres de l'application] (settings.md#settings-file-location).
+- Slicer est généralement simple à installer sur toutes les plateformes. Il est possible d'installer plusieurs versions de l'application sur le même compte utilisateur et elles n'interféreront pas entre elles. Si vous rencontrez des problèmes mystérieux lors de votre installation, vous pouvez essayer de supprimer les [fichiers de paramètres de l'application](settings.md#settings-file-location).
 - Seuls les installateurs 64 bits de Slicer sont disponibles au téléchargement. Les développeurs peuvent essayer de construire eux-mêmes des versions 32 bits s'ils ont besoin d'exécuter Slicer sur un système d'exploitation 32 bits. Cela dit, il convient d'y réfléchir attentivement, car de nombreuses tâches de recherche clinique, telles que le traitement de grands ensembles de données volumétriques de tomodensitométrie ou d'IRM, nécessitent plus de mémoire qu'un programme 32 bits.
 
 Une fois téléchargé, suivez les instructions ci-dessous pour terminer l'installation :
@@ -53,7 +53,7 @@ Une fois téléchargé, suivez les instructions ci-dessous pour terminer l'insta
   - Cette étape est nécessaire car le contenu d'un fichier .dmg est ouvert en tant que volume en lecture seule, et vous ne pouvez pas installer d'extensions ou de paquets Python dans un volume en lecture seule.
 - Supprimez le dossier Slicer.app pour le désinstaller.
 
-Remarque concernant l'installation d'une Preview Release : Actuellement, les paquets de la Preview Release ne sont pas signés. Par conséquent, lorsque l'application est lancée la première fois, le message suivant s'affiche : "Slicer... ne peut pas être ouvert car il provient d'un développeur non identifié". Pour résoudre cette erreur, localisez l'application dans le Finder, faites un clic droit (deux doigts) et cliquez sur "Ouvrir". Lorsque le message "Cette application ne peut pas être ouverte" apparaît, cliquez sur "Annuler". Faites à nouveau un clic droit et dites "Ouvrir" (oui, vous devez répéter la même chose que la fois précédente - le résultat sera différent de celui de la première fois). Cliquez sur le bouton "Ouvrir" (ou "Ouvrir quand même") pour lancer l'application. Vous trouverez plus d'explications et des techniques alternatives [ici] (https://support.apple.com/en-my/guide/mac-help/mh40616/mac).
+Remarque concernant l'installation d'une Preview Release : Actuellement, les paquets de la Preview Release ne sont pas signés. Par conséquent, lorsque l'application est lancée la première fois, le message suivant s'affiche : "Slicer... ne peut pas être ouvert car il provient d'un développeur non identifié". Pour résoudre cette erreur, localisez l'application dans le Finder, faites un clic droit (deux doigts) et cliquez sur "Ouvrir". Lorsque le message "Cette application ne peut pas être ouverte" apparaît, cliquez sur "Annuler". Faites à nouveau un clic droit et dites "Ouvrir" (oui, vous devez répéter la même chose que la fois précédente - le résultat sera différent de celui de la première fois). Cliquez sur le bouton "Ouvrir" (ou "Ouvrir quand même") pour lancer l'application. Vous trouverez plus d'explications et des techniques alternatives [ici](https://support.apple.com/en-my/guide/mac-help/mh40616/mac).
 
 #### Installer avec Homebrew
 
@@ -84,7 +84,7 @@ brew uninstall slicer-preview       # pour désinstaller
 - Supprimez le répertoire pour désinstaller.
 
 **Notes:**
-- Slicer est censé fonctionner sur la grande majorité des distributions Linux de bureau et de serveur. Le système doit fournir au moins GLIBC 2.17 et GLIBCCC 3.4.19. Pour plus de détails, lisez [ici] (https://www.python.org/dev/peps/pep-0599/#the-manylinux2014-policy).
+- Slicer est censé fonctionner sur la grande majorité des distributions Linux de bureau et de serveur. Le système doit fournir au moins GLIBC 2.17 et GLIBCCC 3.4.19. Pour plus de détails, lisez [ici](https://www.python.org/dev/peps/pep-0599/#the-manylinux2014-policy).
 - Le gestionnaire d'extensions utilise QtWebengine pour afficher la liste des extensions. Si votre noyau linux ne répond pas aux [exigences de sandboxing](https://doc.qt.io/Qt-5/qtwebengine-platform-notes.html#sandboxing-support) alors vous pouvez désactiver le sandboxing par cette commande : `export QTWEBENGINE_DISABLE_SANDBOX=1`
 - Pour obtenir des arguments de ligne de commande et des résultats de processus contenant des caractères non ASCII, le système doit utiliser une variable locale UTF-8. Si le système utilise une autre  variable locale, la commande `export LANG="C.UTF-8"` peut être utilisée avant de lancer l'application pour passer à une variable locale acceptable.
 
@@ -112,7 +112,7 @@ Les utilisateurs de Debian 10.12 peuvent rencontrer une erreur lors du lancement
 :::
 
 #### ArchLinux
-ArchLinux exécute l'utilitaire `strip` par défaut ; il doit être désactivé afin d'exécuter les binaires Slicer.  Pour plus d'informations, voir [cette discussion sur le forum Slicer] (https://discourse.slicer.org/t/could-not-load-dicom-data/14211/5).
+ArchLinux exécute l'utilitaire `strip` par défaut ; il doit être désactivé afin d'exécuter les binaires Slicer.  Pour plus d'informations, voir [cette discussion sur le forum Slicer](https://discourse.slicer.org/t/could-not-load-dicom-data/14211/5).
 
 #### Fedora
 Installez les dépendances :
@@ -154,8 +154,8 @@ Vous pouvez personnaliser les vues (afficher le marqueur d'orientation, la règl
 3D Slicer est construit sur une architecture modulaire. Choisissez un module pour traiter ou analyser vos données. Les modules les plus importants sont les suivants (la liste complète est disponible dans la section [Modules](modules/index.md)) :
 
 - *Bienvenue* : Le module par défaut lorsque 3D Slicer est lancé. Il présente des options pour le chargement des données et la personnalisation de 3D Slicer. Sous ces options, des boîtes déroulantes contiennent des informations essentielles à l'utilisation de 3D Slicer.
-- [Data] (modules/data.md) : agit comme un centre d'organisation des données. Il répertorie toutes les données actuellement présentes dans la scène et permet des opérations de base telles que rechercher, renommer, supprimer et déplacer.
-- DICOM](modules/dicom.md) : Importez et exportez des objets DICOM, tels que des images, des segmentations, des ensembles de structures, des objets de radiothérapie, etc.
+- [Data](modules/data.md) : agit comme un centre d'organisation des données. Il répertorie toutes les données actuellement présentes dans la scène et permet des opérations de base telles que rechercher, renommer, supprimer et déplacer.
+- [DICOM](modules/dicom.md) : Importez et exportez des objets DICOM, tels que des images, des segmentations, des ensembles de structures, des objets de radiothérapie, etc.
 - [Volumes](modules/volumes.md) : Utilisé pour changer l'apparence de divers types de volumes.
 - [Volume Rendering](modules/volumerendering.md) : Fournit une visualisation interactive des données d'imagerie 3D.
 - [Segmentations](modules/segmentations.md) : Modifier les propriétés d'affichage et importer/exporter des segmentations.
@@ -166,7 +166,7 @@ Vous pouvez personnaliser les vues (afficher le marqueur d'orientation, la règl
 
 #### Sauvegarder des données
 
-Les jeux de données chargés dans l'application peuvent être enregistrés à l'aide de la boîte de dialogue Enregistrer les données, ou exportés au format DICOM à l'aide du module DICOM. Les détails sont décrits dans la section [Chargement et sauvegarde des données] (data_loading_and_saving.md).
+Les jeux de données chargés dans l'application peuvent être enregistrés à l'aide de la boîte de dialogue Enregistrer les données, ou exportés au format DICOM à l'aide du module DICOM. Les détails sont décrits dans la section [Chargement et sauvegarde des données](data_loading_and_saving.md).
 
 #### Les extensions
 
@@ -179,15 +179,15 @@ Les jeux de données chargés dans l'application peuvent être enregistrés à l
 Pour plus de détails sur le téléchargement des extensions, voir la [documentation du gestionnaire d'extensions](extensions_manager.md).
 Cliquez [ici](https://www.slicer.org/wiki/Documentation/Nightly/ModuleExtensionListing/Extensions_by_category) pour obtenir une liste complète des extensions. Les liens sur la page fourniront la documentation pour chaque extension.
 
-Slicer est extensible. Si vous souhaitez personnaliser ou ajouter des fonctionnalités à Slicer, cliquez [ici] (https://www.slicer.org/wiki/Documentation/Nightly/Training#Tutorials_for_software_developers).
+Slicer est extensible. Si vous souhaitez personnaliser ou ajouter des fonctionnalités à Slicer, cliquez [ici](https://www.slicer.org/wiki/Documentation/Nightly/Training#Tutorials_for_software_developers).
 
 ### Tutoriels
 
 Vous apprenez aussi bien les concepts de base que les flux de travail hautement spécialisés grâce aux nombreux tutoriels vidéo et étape par étape disponibles.
 
-Essayez le [Tutoriel de bienvenue] (https://www.slicer.org/wiki/Documentation/Nightly/Training#Slicer_Welcome_Tutorial) et le [Tutoriel sur le chargement des données et la visualisation 3D] (https://www.slicer.org/wiki/Documentation/Nightly/Training#Slicer4_Data_Loading_and_3D_Visualization) pour apprendre les bases.
+Essayez le [Tutoriel de bienvenue](https://www.slicer.org/wiki/Documentation/Nightly/Training#Slicer_Welcome_Tutorial) et le [Tutoriel sur le chargement des données et la visualisation 3D](https://www.slicer.org/wiki/Documentation/Nightly/Training#Slicer4_Data_Loading_and_3D_Visualization) pour apprendre les bases.
 
-Pour plus de tutoriels, visitez la [page des tutoriels] (https://www.slicer.org/wiki/Documentation/Nightly/Training).
+Pour plus de tutoriels, visitez la [page des tutoriels](https://www.slicer.org/wiki/Documentation/Nightly/Training).
 
 ### Manuel utilisateur
 
@@ -199,7 +199,7 @@ Parcourez la section [Interface utilisateur](user_interface.md) pour obtenir un 
 
 L'application dispose d'une grande communauté d'utilisateurs très sympathiques et serviables. Nous avons des personnes qui seront heureuses de vous aider pour des questions simples, comme la façon d'effectuer une tâche spécifique dans Slicer, et nous avons un grand nombre d'experts en ingénierie et en médecine qui peuvent vous donner des conseils pour résoudre des problèmes complexes.
 
-**Si vous avez des questions, rendez-vous sur le [forum Slicer] (https://discourse.slicer.org) et posez-les nous!**
+**Si vous avez des questions, rendez-vous sur le [forum Slicer](https://discourse.slicer.org) et posez-les nous!**
 
 ## Glossary
 
