@@ -65,9 +65,9 @@ brew upgrade slicer         # pour mettre à jour
 brew uninstall slicer       # pour désinstaller
 ```
 
-This procedure avoids the typical google-download-mount-drag process to install macOS applications.
+Cette démarche permet d'éviter le processus habituel consistant à rechercher sur Google, puis de télécharger, de monter et de glisser pour installer les applications macOS.
 
-Les Preview releases peuvent être installées en utilisant [`homebrew-cask-versions`](https://github.com/Homebrew/homebrew-cask-versions) :
+Les "Preview releases" peuvent être installées en utilisant [`homebrew-cask-versions`](https://github.com/Homebrew/homebrew-cask-versions) :
 
 ```shell
 brew tap homebrew/cask-versions     # doit être exécuté une fois
