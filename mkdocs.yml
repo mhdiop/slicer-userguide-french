@@ -1,1 +1,3 @@
 site_name: Démarrer avec 3D Slicer
+theme:
+  name: 'rtd-dropdown'
