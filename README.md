@@ -25,7 +25,7 @@ GPU : Le matériel graphique doit supporter au minimum OpenGL 3.2. Une carte gra
 - Dispositif d'interface : une souris à trois boutons avec molette de défilement est recommandée. Le stylet, l'écran tactile multipoint, le pavé tactile et la tablette graphique sont pris en charge. Tous les casques de réalité virtuelle compatibles avec OpenVR sont pris en charge pour l'affichage de la réalité virtuelle.
 - Connexion Internet pour accéder aux extensions, aux paquets Python, à la documentation en ligne, aux jeux de données d'exemple et aux tutoriels.
 
-## Installing 3D Slicer
+## Installation de 3D Slicer
 
 Pour télécharger Slicer, cliquez [ici](https://download.slicer.org/).
 
