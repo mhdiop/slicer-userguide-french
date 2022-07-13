@@ -1,5 +1,5 @@
 
-# Démarrer avec *3D Slicer*
+# Démarrer avec 3D Slicer
 
 Bienvenue dans la communauté 3D Slicer. Cette page contient les informations dont vous avez besoin pour démarrer avec 3D Slicer, notamment comment l'installer et utiliser ses fonctionnalités de base et où trouver plus d'informations.
 
